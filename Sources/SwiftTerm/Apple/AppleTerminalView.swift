@@ -497,11 +497,11 @@ extension TerminalView {
             // Looks like we can start the selection range beyond the boundary and it wont be a problem
             //assert (selectionRange.location < cols)
             assert (selectionRange.length >= 0)
-            if (selectionRange.location + selectionRange.length >= cols) {
-            }
-            if row == 1 {
-                print(selectionRange)
-            }
+//            if (selectionRange.location + selectionRange.length >= cols) {
+//            }
+//            if row == 1 {
+//                print(selectionRange)
+//            }
             attributedString.addAttribute(.selectionBackgroundColor, value: selectedTextBackgroundColor, range: selectionRange)
         }
     }
@@ -706,12 +706,12 @@ extension TerminalView {
                     }
                     
                     let rect = CGRect (origin: origin, size: size)
-                    if row == 1 {
-                        if rect.width < 660 {
-                            print("Less")
-                        }
-                        print("col=\(col) rgc=\(runGlyphsCount) ROW R= \(rect)")
-                    }
+//                    if row == 1 {
+//                        if rect.width < 660 {
+//                            print("Less")
+//                        }
+//                        print("col=\(col) rgc=\(runGlyphsCount) ROW R= \(rect)")
+//                    }
                     #if os(macOS)
                     rect.applying(transform).fill(using: .destinationOver)
                     #else
